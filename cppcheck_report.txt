@@ -1,0 +1,491 @@
+FreeRTOS/portable/MemMang/heap_2.c:247:13: style: The scope of the variable 'pxLink' can be reduced. [variableScope]
+xBlockLink *pxLink;
+            ^
+FreeRTOS/portable/MemMang/heap_2.c:81:26: style: union member 'xRTOS_HEAP::ulDummy' is never used. [unusedStructMember]
+  volatile unsigned long ulDummy;
+                         ^
+FreeRTOS/portable/MemMang/heap_4.c:252:13: style: The scope of the variable 'pxLink' can be reduced. [variableScope]
+xBlockLink *pxLink;
+            ^
+FreeRTOS/queue.c:222:8: style: The scope of the variable 'xQueueSizeInBytes' can be reduced. [variableScope]
+size_t xQueueSizeInBytes;
+       ^
+Patch/PatchSelection.c:142:6: warning: Either the condition 'dest' is redundant or there is possible null pointer dereference: dest. [nullPointerRedundantCheck]
+    *dest = 0;
+     ^
+Patch/PatchSelection.c:102:21: note: Assuming that condition 'dest' is not redundant
+  if((offset+1) && (dest) && (length))
+                    ^
+Patch/PatchSelection.c:142:6: note: Null pointer dereference
+    *dest = 0;
+     ^
+Watch/Application/Accelerometer.c:130:56: style: Clarify calculation precedence for '&' and '?'. [clarifyCalculation]
+      AccelerometerRead(Control & DRDYE_DATA_AVAILABLE ? KIONIX_XOUT_L : KIONIX_XOUT_HPF_L,
+                                                       ^
+Watch/Application/CallNotifier.c:151:21: style: Array index 'i' is used before limits check. [arrayIndexThenCheck]
+  i = 0; while (pVal[i] != SPACE && i < Len) i++;
+                    ^
+Watch/Application/Countdown.c:224:10: style: Local variable 'Info' shadows outer variable [shadowVariable]
+  Draw_t Info;
+         ^
+Watch/Application/Countdown.c:66:15: note: Shadowed declaration
+static Draw_t Info;
+              ^
+Watch/Application/Countdown.c:224:10: note: Shadow variable
+  Draw_t Info;
+         ^
+Watch/Application/IdleTask.c:31:52: error: syntax error [syntaxError]
+__no_init __root unsigned char niRadioReadyToSleep @ RADIO_SLEEP_ADDR;
+                                                   ^
+Watch/Application/LcdBuffer.c:1049:17: style: The scope of the variable 'ColumnCounter' can be reduced. [variableScope]
+  unsigned char ColumnCounter = 0;
+                ^
+Watch/Application/LcdBuffer.c:1048:28: style: Variable 'DestColumn' is assigned a value that is never used. [unreadVariable]
+  unsigned char DestColumn = StartCol;
+                           ^
+Watch/Application/LcdBuffer.c:1049:31: style: Variable 'ColumnCounter' is assigned a value that is never used. [unreadVariable]
+  unsigned char ColumnCounter = 0;
+                              ^
+Watch/Application/LcdDisplay.c:690:19: style: The scope of the variable 'i' can be reduced. [variableScope]
+    unsigned char i;
+                  ^
+Watch/Application/LcdDisplay.c:832:24: style: The scope of the variable 'lastMin' can be reduced. [variableScope]
+  static unsigned char lastMin = 61;
+                       ^
+Watch/Application/LcdDisplay.c:853:25: style: Variable 'Updated' is assigned a value that is never used. [unreadVariable]
+  unsigned char Updated = FALSE;
+                        ^
+Watch/Application/Log.c:100:42: error: syntax error [syntaxError]
+__no_init __root LogBuffer_t niLogBuffer @ LOG_BUFFER_ADDR;
+                                         ^
+Watch/Application/MuxMode.c:53:34: style:inconclusive: Function 'ChangeMuxMode' argument 1 names different: declaration 'ClipOn' definition 'Clip'. [funcArgNamesDifferent]
+void ChangeMuxMode(unsigned char Clip)
+                                 ^
+Watch/Application/MuxMode.h:37:34: note: Function 'ChangeMuxMode' argument 1 names different: declaration 'ClipOn' definition 'Clip'.
+void ChangeMuxMode(unsigned char ClipOn);
+                                 ^
+Watch/Application/MuxMode.c:53:34: note: Function 'ChangeMuxMode' argument 1 names different: declaration 'ClipOn' definition 'Clip'.
+void ChangeMuxMode(unsigned char Clip)
+                                 ^
+Watch/Application/MuxMode.c:27:42: error: syntax error [syntaxError]
+__no_init __root unsigned char niMuxMode @ MUX_MODE_ADDR;
+                                         ^
+Watch/Application/Property.c:31:43: error: syntax error [syntaxError]
+__no_init __root unsigned char niProperty @ PROPERTY_ADDR;
+                                          ^
+Watch/Application/TermMode.c:78:24: style: The scope of the variable 'i' can be reduced. [variableScope]
+  static unsigned char i = 0;
+                       ^
+Watch/Application/Vibration.c:92:22: style: Variable 'temp.Bytes.byte0' is reassigned a value before the old one has been used. [redundantAssignment]
+    temp.Bytes.byte0 = pMsgData->OffDurationLsb;
+                     ^
+Watch/Application/Vibration.c:88:22: note: temp.Bytes.byte0 is assigned
+    temp.Bytes.byte0 = pMsgData->OnDurationLsb;
+                     ^
+Watch/Application/Vibration.c:92:22: note: temp.Bytes.byte0 is overwritten
+    temp.Bytes.byte0 = pMsgData->OffDurationLsb;
+                     ^
+Watch/Application/Vibration.c:93:22: style: Variable 'temp.Bytes.byte1' is reassigned a value before the old one has been used. [redundantAssignment]
+    temp.Bytes.byte1 = pMsgData->OffDurationMsb;
+                     ^
+Watch/Application/Vibration.c:89:22: note: temp.Bytes.byte1 is assigned
+    temp.Bytes.byte1 = pMsgData->OnDurationMsb;
+                     ^
+Watch/Application/Vibration.c:93:22: note: temp.Bytes.byte1 is overwritten
+    temp.Bytes.byte1 = pMsgData->OffDurationMsb;
+                     ^
+Watch/Application/Vibration.c:88:24: error: Uninitialized struct member: pMsgData.OnDurationLsb [uninitStructMember]
+    temp.Bytes.byte0 = pMsgData->OnDurationLsb;
+                       ^
+Watch/Application/Vibration.c:89:24: error: Uninitialized struct member: pMsgData.OnDurationMsb [uninitStructMember]
+    temp.Bytes.byte1 = pMsgData->OnDurationMsb;
+                       ^
+Watch/Application/Vibration.c:92:24: error: Uninitialized struct member: pMsgData.OffDurationLsb [uninitStructMember]
+    temp.Bytes.byte0 = pMsgData->OffDurationLsb;
+                       ^
+Watch/Application/Vibration.c:93:24: error: Uninitialized struct member: pMsgData.OffDurationMsb [uninitStructMember]
+    temp.Bytes.byte1 = pMsgData->OffDurationMsb;
+                       ^
+Watch/Application/Vibration.c:96:18: error: Uninitialized struct member: pMsgData.NumberOfCycles [uninitStructMember]
+    CycleCount = pMsgData->NumberOfCycles;
+                 ^
+Watch/Application/Widget.c:260:32: style: Array index 'i' is used before limits check. [arrayIndexThenCheck]
+    for (i = 0; pCurrWidgetList[i].Id != INVALID_ID && i < MAX_WIDGET_NUM; ++i)
+                               ^
+Watch/Application/Widget.c:398:25: style: Array index 'i' is used before limits check. [arrayIndexThenCheck]
+  for (; pCurrWidgetList[i].Id != INVALID_ID && i < MAX_WIDGET_NUM; ++i)
+                        ^
+Watch/Application/Widget.c:599:32: style: Array index 'i' is used before limits check. [arrayIndexThenCheck]
+    for (i = 0; pCurrWidgetList[i].Id != INVALID_ID && i < MAX_WIDGET_NUM; ++i)
+                               ^
+Watch/Application/Widget.c:623:25: style: Array index 'i' is used before limits check. [arrayIndexThenCheck]
+  for (; pCurrWidgetList[i].Id != INVALID_ID && i < MAX_WIDGET_NUM; ++i)
+                        ^
+Watch/Application/Widget.c:743:30: style: Array index 'i' is used before limits check. [arrayIndexThenCheck]
+  for (i = 0; pCurrWidgetList[i].Id != INVALID_ID && i < MAX_WIDGET_NUM; ++i)
+                             ^
+Watch/Application/Widget.c:771:25: style: Array index 'i' is used before limits check. [arrayIndexThenCheck]
+  for (; pCurrWidgetList[i].Id != INVALID_ID && i < MAX_WIDGET_NUM; ++i)
+                        ^
+Watch/Application/Widget.c:790:30: style: Array index 'i' is used before limits check. [arrayIndexThenCheck]
+  for (i = 0; pCurrWidgetList[i].Id != INVALID_ID && i < MAX_WIDGET_NUM; ++i)
+                             ^
+Watch/Hardware/hal_accelerometer.c:95:10: style: Condition 'AccelerometerBusy' is always true [knownConditionTrueFalse]
+  while (AccelerometerBusy);
+         ^
+Watch/Hardware/hal_accelerometer.c:75:23: note: Assignment 'AccelerometerBusy=1', assigned value is 1
+  AccelerometerBusy = 1;
+                      ^
+Watch/Hardware/hal_accelerometer.c:95:10: note: Condition 'AccelerometerBusy' is always true
+  while (AccelerometerBusy);
+         ^
+Watch/Hardware/hal_accelerometer.c:138:19: style: Condition 'LengthCount==1' is always true [knownConditionTrueFalse]
+  if (LengthCount == 1)
+                  ^
+Watch/Hardware/hal_accelerometer.c:111:17: note: Assignment 'LengthCount=1', assigned value is 1
+  LengthCount = 1;
+                ^
+Watch/Hardware/hal_accelerometer.c:138:19: note: Condition 'LengthCount==1' is always true
+  if (LengthCount == 1)
+                  ^
+Watch/Hardware/hal_battery.c:118:24: style: The scope of the variable 'Count' can be reduced. [variableScope]
+  static unsigned char Count = 0;
+                       ^
+Watch/Hardware/hal_oled.c:98:9: style: Condition 'OledBusy' is always true [knownConditionTrueFalse]
+  while(OledBusy);
+        ^
+Watch/Hardware/hal_oled.c:78:14: note: Assignment 'OledBusy=1', assigned value is 1
+  OledBusy = 1;
+             ^
+Watch/Hardware/hal_oled.c:98:9: note: Condition 'OledBusy' is always true
+  while(OledBusy);
+        ^
+Watch/Hardware/hal_rtc.c:180:35: style:inconclusive: Function 'ToBCD' argument 1 names different: declaration 'Dec' definition 'Bin'. [funcArgNamesDifferent]
+unsigned char ToBCD(unsigned char Bin)
+                                  ^
+Watch/Hardware/hal_rtc.h:104:35: note: Function 'ToBCD' argument 1 names different: declaration 'Dec' definition 'Bin'.
+unsigned char ToBCD(unsigned char Dec);
+                                  ^
+Watch/Hardware/hal_rtc.c:180:35: note: Function 'ToBCD' argument 1 names different: declaration 'Dec' definition 'Bin'.
+unsigned char ToBCD(unsigned char Bin)
+                                  ^
+Watch/Hardware/hal_rtc.c:238:51: style:inconclusive: Function 'EnableRtcPrescaleInterruptUser' argument 1 names different: declaration 'user' definition 'UserMask'. [funcArgNamesDifferent]
+void EnableRtcPrescaleInterruptUser(unsigned char UserMask)
+                                                  ^
+Watch/Hardware/hal_rtc.h:70:51: note: Function 'EnableRtcPrescaleInterruptUser' argument 1 names different: declaration 'user' definition 'UserMask'.
+void EnableRtcPrescaleInterruptUser(unsigned char user);
+                                                  ^
+Watch/Hardware/hal_rtc.c:238:51: note: Function 'EnableRtcPrescaleInterruptUser' argument 1 names different: declaration 'user' definition 'UserMask'.
+void EnableRtcPrescaleInterruptUser(unsigned char UserMask)
+                                                  ^
+Watch/Hardware/hal_rtc.c:253:52: style:inconclusive: Function 'DisableRtcPrescaleInterruptUser' argument 1 names different: declaration 'user' definition 'UserMask'. [funcArgNamesDifferent]
+void DisableRtcPrescaleInterruptUser(unsigned char UserMask)
+                                                   ^
+Watch/Hardware/hal_rtc.h:81:52: note: Function 'DisableRtcPrescaleInterruptUser' argument 1 names different: declaration 'user' definition 'UserMask'.
+void DisableRtcPrescaleInterruptUser(unsigned char user);
+                                                   ^
+Watch/Hardware/hal_rtc.c:253:52: note: Function 'DisableRtcPrescaleInterruptUser' argument 1 names different: declaration 'user' definition 'UserMask'.
+void DisableRtcPrescaleInterruptUser(unsigned char UserMask)
+                                                   ^
+Watch/Hardware/hal_rtos_timer.c:123:53: style:inconclusive: Function 'AddUser' argument 2 names different: declaration 'Ticks' definition 'CrystalTicks'. [funcArgNamesDifferent]
+static void AddUser(unsigned char User,unsigned int CrystalTicks)
+                                                    ^
+Watch/Hardware/hal_rtos_timer.c:50:54: note: Function 'AddUser' argument 2 names different: declaration 'Ticks' definition 'CrystalTicks'.
+static void AddUser(unsigned char User, unsigned int Ticks);
+                                                     ^
+Watch/Hardware/hal_rtos_timer.c:123:53: note: Function 'AddUser' argument 2 names different: declaration 'Ticks' definition 'CrystalTicks'.
+static void AddUser(unsigned char User,unsigned int CrystalTicks)
+                                                    ^
+Watch/Hardware/hal_accelerometer.c:191:0: style: The function 'ACCERLEROMETER_ISR' is never used. [unusedFunction]
+
+^
+Watch/Application/Accelerometer.c:226:0: style: The function 'AccelerometerPinIsr' is never used. [unusedFunction]
+
+^
+Watch/Hardware/hal_analog_display.c:37:0: style: The function 'AdvanceAnalogDisplay' is never used. [unusedFunction]
+
+^
+Watch/Application/Buttons.c:631:0: style: The function 'ButtonPortIsr' is never used. [unusedFunction]
+
+^
+Watch/Hardware/hal_boot.c:62:0: style: The function 'CheckResetType' is never used. [unusedFunction]
+
+^
+Watch/Application/LcdDriver.c:154:0: style: The function 'ClearLcd' is never used. [unusedFunction]
+
+^
+Watch/Application/LcdBuffer.c:1026:0: style: The function 'CopyRowsIntoMyBuffer_20' is never used. [unusedFunction]
+
+^
+Watch/Application/SerialRam.c:613:0: style: The function 'DMA_ISR' is never used. [unusedFunction]
+
+^
+Watch/Application/main.c:114:0: style: The function 'DebugBtUartError' is never used. [unusedFunction]
+
+^
+Watch/Application/DebugUart.c:317:0: style: The function 'DebugUartIsr' is never used. [unusedFunction]
+
+^
+Watch/Hardware/hal_software_fll.c:78:0: style: The function 'DisableSoftwareFll' is never used. [unusedFunction]
+
+^
+Watch/Application/LcdDisplay.c:825:0: style: The function 'EnableRtcUpdate' is never used. [unusedFunction]
+
+^
+Watch/Hardware/hal_software_fll.c:59:0: style: The function 'EnableSoftwareFll' is never used. [unusedFunction]
+
+^
+Watch/Application/DebugUart.c:158:0: style: The function 'EnableTimeStamp' is never used. [unusedFunction]
+
+^
+Watch/Hardware/F5xx_F6xx_Core_Lib/HAL_FLASH.c:114:0: style: The function 'FlashMemoryFill_32' is never used. [unusedFunction]
+
+^
+Watch/Hardware/F5xx_F6xx_Core_Lib/HAL_FLASH.c:84:0: style: The function 'FlashWrite_16' is never used. [unusedFunction]
+
+^
+Watch/Hardware/F5xx_F6xx_Core_Lib/HAL_FLASH.c:99:0: style: The function 'FlashWrite_32' is never used. [unusedFunction]
+
+^
+Watch/Hardware/F5xx_F6xx_Core_Lib/HAL_FLASH.c:69:0: style: The function 'FlashWrite_8' is never used. [unusedFunction]
+
+^
+Watch/Hardware/F5xx_F6xx_Core_Lib/HAL_FLASH.c:56:0: style: The function 'Flash_EraseCheck' is never used. [unusedFunction]
+
+^
+Watch/Hardware/F5xx_F6xx_Core_Lib/HAL_FLASH.c:46:0: style: The function 'Flash_SegmentErase' is never used. [unusedFunction]
+
+^
+Watch/Hardware/hal_boot.c:55:0: style: The function 'GetBootloaderSignature' is never used. [unusedFunction]
+
+^
+Patch/PatchSelection.c:42:0: style: The function 'GetPatchLength' is never used. [unusedFunction]
+
+^
+Patch/PatchSelection.c:35:0: style: The function 'GetRadioVersion' is never used. [unusedFunction]
+
+^
+Watch/Hardware/F5xx_F6xx_Core_Lib/HAL_TLV.c:69:0: style: The function 'Get_Device_Type' is never used. [unusedFunction]
+
+^
+Watch/Hardware/F5xx_F6xx_Core_Lib/HAL_TLV.c:130:0: style: The function 'Get_TLV_Interrupt' is never used. [unusedFunction]
+
+^
+Watch/Hardware/F5xx_F6xx_Core_Lib/HAL_TLV.c:95:0: style: The function 'Get_TLV_Peripheral' is never used. [unusedFunction]
+
+^
+Watch/Application/Statistics.c:55:0: style: The function 'IncrementRxCrcFailureCount' is never used. [unusedFunction]
+
+^
+Watch/Application/Statistics.c:38:0: style: The function 'IncrementUpTime' is never used. [unusedFunction]
+
+^
+Watch/Hardware/hal_oled.c:41:0: style: The function 'InitOledI2cPeripheral' is never used. [unusedFunction]
+
+^
+Watch/Hardware/OledDriver.c:93:0: style: The function 'InitializeOledDisplayController' is never used. [unusedFunction]
+
+^
+Patch/PatchSelection.c:99:0: style: The function 'MovePatchBytes' is never used. [unusedFunction]
+
+^
+Watch/Application/main.c:119:0: style: The function 'MsgHandlerDebugCallback' is never used. [unusedFunction]
+
+^
+Watch/Hardware/hal_oled.c:117:0: style: The function 'OLED_I2C_ISR' is never used. [unusedFunction]
+
+^
+Watch/Hardware/OledDriver.c:61:0: style: The function 'OledPowerDown' is never used. [unusedFunction]
+
+^
+Watch/Hardware/OledDriver.c:37:0: style: The function 'OledPowerUpSequence' is never used. [unusedFunction]
+
+^
+Watch/Hardware/hal_miscellaneous.c:125:0: style: The function 'PMM15Check' is never used. [unusedFunction]
+
+^
+Patch/PatchSelection.c:164:0: style: The function 'QueryIncludedPatchSupportsRadio' is never used. [unusedFunction]
+
+^
+Watch/Hardware/hal_rtos_timer.c:177:0: style: The function 'QuerySchedulerState' is never used. [unusedFunction]
+
+^
+Patch/PatchSelection.c:149:0: style: The function 'QuerySupportLowEnergy' is never used. [unusedFunction]
+
+^
+Watch/Hardware/hal_rtc.c:281:0: style: The function 'RTC_ISR' is never used. [unusedFunction]
+
+^
+Patch/PatchSelection.c:30:0: style: The function 'SetRadioVersion' is never used. [unusedFunction]
+
+^
+Watch/Hardware/OledDriver.c:173:0: style: The function 'SetRowInOled' is never used. [unusedFunction]
+
+^
+Watch/Application/IdleTask.c:48:0: style: The function 'SetWatchdogInterval' is never used. [unusedFunction]
+
+^
+Watch/Hardware/hal_rtos_timer.c:87:0: style: The function 'SetupRtosTimer' is never used. [unusedFunction]
+
+^
+Watch/Hardware/hal_analog_display.c:66:0: style: The function 'SetupTimerForAnalogDisplay' is never used. [unusedFunction]
+
+^
+Watch/Application/main.c:109:0: style: The function 'SniffModeEntryAttemptCallback' is never used. [unusedFunction]
+
+^
+Watch/Application/main.c:99:0: style: The function 'SppHostMessageWriteCallback' is never used. [unusedFunction]
+
+^
+Watch/Application/main.c:104:0: style: The function 'SppReceivePacketCallback' is never used. [unusedFunction]
+
+^
+Watch/Hardware/hal_rtos_timer.c:182:0: style: The function 'StartCrystalTimer' is never used. [unusedFunction]
+
+^
+Watch/Hardware/hal_rtos_timer.c:201:0: style: The function 'StopCrystalTimer' is never used. [unusedFunction]
+
+^
+Watch/Hardware/hal_rtos_timer.c:215:0: style: The function 'TIMER0_A1_VECTOR_ISR' is never used. [unusedFunction]
+
+^
+Watch/Hardware/hal_analog_display.c:119:0: style: The function 'TIMER0_B0_ISR' is never used. [unusedFunction]
+
+^
+Watch/Hardware/hal_software_fll.c:142:0: style: The function 'TIMER0_B0_VECTOR_ISR' is never used. [unusedFunction]
+
+^
+Watch/Hardware/hal_software_fll.c:156:0: style: The function 'TIMER0_B1_VECTOR_ISR' is never used. [unusedFunction]
+
+^
+Watch/Application/main.c:124:0: style: The function 'UnusedIsr' is never used. [unusedFunction]
+
+^
+Watch/Hardware/hal_vibe.c:45:0: style: The function 'VibeDisable' is never used. [unusedFunction]
+
+^
+Watch/Hardware/hal_vibe.c:40:0: style: The function 'VibeEnable' is never used. [unusedFunction]
+
+^
+Watch/Application/IdleTask.c:108:0: style: The function 'WatchdogTimerIsr' is never used. [unusedFunction]
+
+^
+Watch/Hardware/OledDriver.c:166:0: style: The function 'WriteOledData' is never used. [unusedFunction]
+
+^
+Watch/Hardware/OledDriver.c:83:0: style: The function 'WriteOledDataPacket' is never used. [unusedFunction]
+
+^
+Watch/Hardware/F5xx_F6xx_Core_Lib/HAL_UCS.c:180:0: style: The function 'XT1_Stop' is never used. [unusedFunction]
+
+^
+FreeRTOS/portable/MSP430F5438/Lowinit.c:25:0: style: The function '__low_level_init' is never used. [unusedFunction]
+
+^
+FreeRTOS/portable/MSP430F5438/pre_init.c:32:0: style: The function '_system_pre_init' is never used. [unusedFunction]
+
+^
+Watch/Hardware/F5xx_F6xx_Core_Lib/HAL_PMAP.c:52:0: style: The function 'configure_ports' is never used. [unusedFunction]
+
+^
+OSAL/MSP430FlashUtil.c:58:0: style: The function 'flashErasePage' is never used. [unusedFunction]
+
+^
+OSAL/MSP430FlashUtil.c:108:0: style: The function 'flashErasePageData20' is never used. [unusedFunction]
+
+^
+OSAL/MSP430FlashUtil.c:71:0: style: The function 'flashWrite' is never used. [unusedFunction]
+
+^
+OSAL/MSP430FlashUtil.c:90:0: style: The function 'flashWriteData20' is never used. [unusedFunction]
+
+^
+FreeRTOS/queue.c:990:0: style: The function 'uxQueueMessagesWaiting' is never used. [unusedFunction]
+
+^
+FreeRTOS/queue.c:1002:0: style: The function 'uxQueueMessagesWaitingFromISR' is never used. [unusedFunction]
+
+^
+FreeRTOS/tasks.c:1148:0: style: The function 'uxTaskGetNumberOfTasks' is never used. [unusedFunction]
+
+^
+Watch/Application/IdleTask.c:158:0: style: The function 'vApplicationIdleHook' is never used. [unusedFunction]
+
+^
+Watch/Application/DebugUart.c:265:0: style: The function 'vApplicationMallocFailedHook' is never used. [unusedFunction]
+
+^
+Watch/Application/DebugUart.c:295:0: style: The function 'vApplicationStackOverflowHook' is never used. [unusedFunction]
+
+^
+Watch/Application/DebugUart.c:277:0: style: The function 'vAssertCalled' is never used. [unusedFunction]
+
+^
+FreeRTOS/croutine.c:299:0: style: The function 'vCoRoutineSchedule' is never used. [unusedFunction]
+
+^
+FreeRTOS/portable/MemMang/heap_2.c:275:0: style: The function 'vPortInitialiseBlocks' is never used. [unusedFunction]
+
+^
+FreeRTOS/queue.c:1012:0: style: The function 'vQueueDelete' is never used. [unusedFunction]
+
+^
+FreeRTOS/tasks.c:1031:0: style: The function 'vTaskEndScheduler' is never used. [unusedFunction]
+
+^
+FreeRTOS/tasks.c:1541:0: style: The function 'vTaskSwitchContext' is never used. [unusedFunction]
+
+^
+FreeRTOS/croutine.c:125:0: style: The function 'xCoRoutineCreate' is never used. [unusedFunction]
+
+^
+FreeRTOS/portable/MemMang/heap_2.c:269:0: style: The function 'xPortGetFreeHeapSize' is never used. [unusedFunction]
+
+^
+FreeRTOS/queue.c:615:0: style: The function 'xQueueAltGenericReceive' is never used. [unusedFunction]
+
+^
+FreeRTOS/queue.c:541:0: style: The function 'xQueueAltGenericSend' is never used. [unusedFunction]
+
+^
+FreeRTOS/queue.c:1250:0: style: The function 'xQueueCRReceive' is never used. [unusedFunction]
+
+^
+FreeRTOS/queue.c:1353:0: style: The function 'xQueueCRReceiveFromISR' is never used. [unusedFunction]
+
+^
+FreeRTOS/queue.c:1182:0: style: The function 'xQueueCRSend' is never used. [unusedFunction]
+
+^
+FreeRTOS/queue.c:1325:0: style: The function 'xQueueCRSendFromISR' is never used. [unusedFunction]
+
+^
+FreeRTOS/queue.c:400:0: style: The function 'xQueueCreateCountingSemaphore' is never used. [unusedFunction]
+
+^
+FreeRTOS/queue.c:739:0: style: The function 'xQueueGenericSendFromISR' is never used. [unusedFunction]
+
+^
+FreeRTOS/queue.c:319:0: style: The function 'xQueueGiveMutexRecursive' is never used. [unusedFunction]
+
+^
+FreeRTOS/queue.c:1149:0: style: The function 'xQueueIsQueueEmptyFromISR' is never used. [unusedFunction]
+
+^
+FreeRTOS/queue.c:1171:0: style: The function 'xQueueIsQueueFullFromISR' is never used. [unusedFunction]
+
+^
+FreeRTOS/queue.c:939:0: style: The function 'xQueueReceiveFromISR' is never used. [unusedFunction]
+
+^
+FreeRTOS/queue.c:366:0: style: The function 'xQueueTakeMutexRecursive' is never used. [unusedFunction]
+
+^
+FreeRTOS/tasks.c:337:0: style: The function 'xTaskGenericCreate' is never used. [unusedFunction]
+
+^
+FreeRTOS/tasks.c:2329:0: style: The function 'xTaskTickRequired' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
